@@ -10,9 +10,20 @@
       <div class="loader" ng-show="isLoading">
         <i class="mdi-navigation-refresh mdi-material-lime"></i>
       </div>
-      <div class="preview">
-        <h3>{{videoInfo.title}}</h3>
-        <youtube-video video-id="selectedVideo"></youtube-video>
+      <div class="preview clearfix">
+        <div class="video-container">
+          <div class="video-wrap">
+            <youtube-video video-id="selectedVideo"></youtube-video>
+          </div>
+        </div>
+        <div class="info">
+          <h4>Video: {{videoInfo.title}}</h4>
+          <div class="form-group">
+            <label class="control-label" for="inputLarge">Your name:</label>
+            <input class="form-control input-lg" type="text" id="inputSmall">
+          </div>
+          <p><button class="btn btn-primary btn-flat"><i class="mdi-navigation-check"></i> Send video<div class="ripple-wrapper"></div></button></p>
+        </div>
       </div>
     </div>
   </div>

@@ -23,11 +23,6 @@ body {
   text-align: center;
   border-bottom: 1px solid #e5e5e5;
 }
-.jumbotron .btn {
-  font-size: 21px;
-  padding: 14px 24px;
-}
-
 
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
@@ -83,6 +78,10 @@ body {
 }
 
 /* Own css */
+.inputForm {
+  text-align: left;
+}
+
 .workspace {
   width: 100%;
   position: relative;
@@ -108,3 +107,28 @@ body {
   animation: rotating 2s linear infinite;
 }
 
+.video-container, .info {
+  width: 50%;
+  box-sizing: border-box;
+  float: left;
+  padding: 0 20px;
+}
+.info {
+  text-align: left;
+  border: 1px solid rgba(0, 150, 136, 0.2);
+}
+
+
+.video-wrap {
+  width: 100%;
+  height: 0;
+  padding: 28.125%;
+  position: relative;
+}
+.video-wrap iframe {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
