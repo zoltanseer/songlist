@@ -85,6 +85,14 @@ module.exports = function (grunt) {
                 '/app/styles',
                 connect.static('./app/styles')
               ),
+              lrSnippet,
+              mountFolder(connect, '.tmp'),
+              mountFolder(connect, yeomanConfig.app),
+              function(req, res, next) {
+                res.setHeader('Access-Control-Allow-Origin', '*');
+                res.setHeader('Access-Control-Allow-Methods', '*');
+                next();
+              },
               connect.static(appConfig.app)
             ];
           }

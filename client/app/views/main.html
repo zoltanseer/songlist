@@ -6,9 +6,13 @@
       <label class="control-label" for="inputLarge">Youtube URL</label>
       <input class="form-control input-lg" type="text" id="inputLarge" ng-model="url" ng-change="validate()">
     </div>
-    <div class="workspace">
-      <div class="loader">
+    <div class="workspace" ng-show="hasData">
+      <div class="loader" ng-show="isLoading">
         <i class="mdi-navigation-refresh mdi-material-lime"></i>
+      </div>
+      <div class="preview">
+        <h3>{{videoInfo.title}}</h3>
+        <youtube-video video-id="selectedVideo"></youtube-video>
       </div>
     </div>
   </div>

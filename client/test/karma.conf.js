@@ -30,6 +30,7 @@ module.exports = function(config) {
       'bower_components/bootstrap-material-design/dist/js/material.js',
       'bower_components/bootstrap-material-design/dist/js/ripples.js',
       'bower_components/bootstrap/dist/js/bootstrap.js',
+      'bower_components/angular-youtube-mb/src/angular-youtube-embed.js',
       'bower_components/angular-mocks/angular-mocks.js',
       // endbower
       "app/scripts/**/*.js",

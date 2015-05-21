@@ -15,7 +15,7 @@ angular.module('songappApp')
     // Public API here
     return {
       getInfo: function (id) {
-        return $http.get('http://www.youtube.com/oembed?url=http://www.youtube.com/watch?v=' + id + '&format=json');
+        return $http.get('https://www.googleapis.com/youtube/v3/videos?id=' + id + '&key=AIzaSyB2mHimrehM1oChaKSJeF50MjmyIXCg6TY&part=snippet');
       }
     };
   });

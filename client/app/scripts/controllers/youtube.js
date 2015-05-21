@@ -11,11 +11,11 @@ angular.module('songappApp')
   .controller('YoutubeCtrl', function ($scope, processVideo) {
     $scope.url = '';
     $scope.validate = function() {
-      var id;
-      if (id = isValidYoutubeURL($scope.url)) {
-        getVideoInfo(id);
+      var id = isValidYoutubeURL($scope.url);
+      if (id) {
+        $scope.getVideoInfo(id);
       } else {
-        $('.loader').hide();
+        $scope.isLoading = false;
       }
     };
 
@@ -24,10 +24,16 @@ angular.module('songappApp')
       return (url.match(p)) ? RegExp.$1 : false;
     }
 
-    function getVideoInfo(id) {
-      $('.loader').show();
+    $scope.getVideoInfo = function (id) {
+      $scope.isLoading = true;
+      $scope.hasData = true;
       processVideo.getInfo(id).then(function (d) {
         console.log(d);
+        $scope.isLoading = false;
+        $scope.selectedVideo = id;
+        $scope.videoInfo = {
+          title: d.data.items[0].snippet.title
+        }
       });
     }
 

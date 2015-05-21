@@ -12,7 +12,8 @@ angular
   .module('songappApp', [
     'ngRoute',
     'ngSanitize',
-    'ngTouch'
+    'ngTouch',
+    'youtube-embed'
   ])
   .config(function ($routeProvider) {
     $routeProvider
